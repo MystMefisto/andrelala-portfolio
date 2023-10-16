@@ -3,7 +3,13 @@
     .presentation-container {
         flex-direction: column;
         text-align: center;
-        margin: auto 20px;
+        margin: auto !important;
+    }
+
+    .presentation-container video{
+        width: 100% !important;
+        left: 0 !important;
+        clip-path: inset(0 0 100px 0) !important;
     }
 
     .logo {
@@ -51,6 +57,7 @@
 body {
     font-family: 'Gabarito', sans-serif;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .presentation-container {
@@ -59,13 +66,23 @@ body {
     height: 100vh;
 }
 
+.presentation-container video{
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 150%;
+    height: 115vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(4px);
+    clip-path: inset(0 150px 100px 160px);
+}
+
 .logo {
     clip-path: circle(40%);
     width: 400px;
     height: 400px;
 }
-
-.title-container {}
 
 .title {
     display: block;
@@ -85,11 +102,11 @@ body {
     font-size: 30px;
 }
 
-.rss-container {}
 
 .rss {
     width: 60px;
     height: auto;
+    border-radius: 36px;
 }
 
 .portfolio-container {
