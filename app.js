@@ -15,7 +15,7 @@ async function fetchVideos(url,options){
      result.items.forEach(element => {
         if(element.id.kind==='youtube#video'){
         const title = element.snippet.title;
-        const thumbnail = element.snippet.thumbnails.default.url;
+        const thumbnail = element.snippet.thumbnails.high.url;
         const link = element.id.videoId;
         videoContainer.innerHTML += `
         <div class="video">
