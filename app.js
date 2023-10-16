@@ -26,8 +26,7 @@ async function fetchVideos(url,options){
             </div>
          `
         }
-     });
-	console.log(result.items);    
+     }); 
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
